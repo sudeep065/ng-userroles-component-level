@@ -1,0 +1,22 @@
+<hello name="{{ name }}"></hello> 
+
+<p>
+  USER ROLES LIST = <code>[ "Admin", "SuperAdmin", "User", "DataManager"];</code>
+</p>
+<hr>
+
+<code>*ifRoles='["Admin"]'</code> : Only Admin Can View
+<div style="background:lightgrey; padding:10px">
+<p *ifRoles='["Admin"]'>
+  ADMIN CONTENT IS VIEWED
+</p>
+</div>
+<hr>
+
+<code>*ifRoles='["Bidder"]'</code> : Below Content Require `Bidder` role
+<div style="background:lightgrey; padding:10px">
+<p *ifRoles='["Bidder"]'>
+  ADMIN CONTENT IS VIEWED
+</p>
+</div>
+<hr style="margin-top:60px">
